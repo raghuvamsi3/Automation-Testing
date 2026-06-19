@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Sponsorship Hub - Master Suite" thread-count="2" parallel="tests">
+    
+    <listeners>
+        <listener class-name="com.sponsorship.listeners.ExtentTestListener"/>
+    </listeners>
+
+    <test name="Auth Module">
+        <classes>
+            <class name="com.sponsorship.tests.auth.SignupTests"/>
+            <class name="com.sponsorship.tests.auth.LoginTests"/>
+        </classes>
+    </test>
+
+    <test name="Campaign Module">
+        <classes>
+            <class name="com.sponsorship.tests.campaign.CampaignCreationTests"/>
+            <class name="com.sponsorship.tests.campaign.CampaignManagementTests"/>
+            <class name="com.sponsorship.tests.campaign.CampaignDiscoveryTests"/>
+        </classes>
+    </test>
+
+    <test name="Workflow and Payments Module">
+        <classes>
+            <class name="com.sponsorship.tests.sponsorship.SponsorshipWorkflowTests"/>
+            <class name="com.sponsorship.tests.payment.PaymentTests"/>
+        </classes>
+    </test>
+
+    <test name="Other Modules">
+        <classes>
+            <class name="com.sponsorship.tests.rating.RatingTests"/>
+            <class name="com.sponsorship.tests.notification.NotificationTests"/>
+            <class name="com.sponsorship.tests.admin.AdminTests"/>
+        </classes>
+    </test>
+
+</suite>
