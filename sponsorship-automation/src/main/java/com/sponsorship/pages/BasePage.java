@@ -125,12 +125,21 @@ public abstract class BasePage {
      * Selects an option from a mat-select dropdown.
      */
     protected void selectMatOption(By selectLocator, String optionText) {
-        click(selectLocator);
-        waitUtils.waitForMatSelectPanel();
-        By optionLocator = By.xpath("//mat-option/span[contains(normalize-space(.), '" + optionText + "')]");
-        click(optionLocator);
+        try {
+            click(selectLocator);
+            waitUtils.waitForMatSelectPanel();
+        } catch (org.openqa.selenium.TimeoutException e) {
+            jsClick(selectLocator);
+            waitUtils.waitForMatSelectPanel();
+        }
+        By optionLocator = By.xpath("//mat-option[contains(normalize-space(.), '" + optionText + "')]");
+        try {
+            click(optionLocator);
+        } catch (Exception e) {
+            jsClick(optionLocator);
+        }
         // Wait for overlay to close
-        waitUtils.shortWait(300);
+        waitUtils.shortWait(500);
     }
 
     /**

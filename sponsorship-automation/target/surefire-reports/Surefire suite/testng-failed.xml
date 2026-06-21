@@ -3,20 +3,18 @@
 <suite name="Failed suite [Surefire suite]" verbose="0">
   <test thread-count="5" name="Surefire test(failed)" verbose="0">
     <classes>
-      <class name="com.sponsorship.tests.auth.LoginTests">
+      <class name="com.sponsorship.tests.campaign.CampaignCreationTests">
         <methods>
-          <include name="TC_01_04_loginWithValidAdminCredentials"/>
-          <include name="TC_01_04_loginWithValidInfluencerCredentials"/>
-          <include name="suiteSetup"/>
+          <include name="TC_02_02_createCampaignNameTooShort"/>
+          <include name="TC_02_06_campaignDescriptionTooShort"/>
           <include name="suiteTearDown"/>
+          <include name="suiteSetup"/>
+          <include name="TC_02_01_createCampaignWithValidData"/>
           <include name="setUp"/>
           <include name="tearDown"/>
-          <include name="TC_01_04_verifyLoginPageUI"/>
-          <include name="TC_01_05_loginWithIncorrectPassword"/>
-          <include name="TC_01_04_loginWithValidBrandCredentials"/>
-          <include name="TC_01_05_loginWithNonExistentEmail"/>
+          <include name="TC_02_03_createCampaignPastStartDate"/>
         </methods>
-      </class> <!-- com.sponsorship.tests.auth.LoginTests -->
+      </class> <!-- com.sponsorship.tests.campaign.CampaignCreationTests -->
     </classes>
   </test> <!-- Surefire test(failed) -->
 </suite> <!-- Failed suite [Surefire suite] -->

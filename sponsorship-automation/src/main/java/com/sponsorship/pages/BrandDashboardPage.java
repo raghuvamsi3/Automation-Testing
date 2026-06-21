@@ -68,7 +68,16 @@ public class BrandDashboardPage extends BasePage {
 
     public void clickCreateCampaign() {
         click(createCampaignButton);
+        try {
+            waitUtils.waitForUrlContains("/campaigns/new");
+        } catch (org.openqa.selenium.TimeoutException e) {
+            // Fallback to javascript click if standard click was intercepted/ineffective
+            WebElement btn = waitUtils.waitForPresence(createCampaignButton);
+            ((org.openqa.selenium.JavascriptExecutor) driver).executeScript("arguments[0].click();", btn);
+            waitUtils.waitForUrlContains("/campaigns/new");
+        }
         waitForPageLoad();
+        waitUtils.shortWait(1000); // Give Angular Reactive Forms time to initialize and stabilize
     }
 
     public void clickCampaignCard(int index) {

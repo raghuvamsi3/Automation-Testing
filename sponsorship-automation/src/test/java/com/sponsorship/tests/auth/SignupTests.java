@@ -226,11 +226,5 @@ public class SignupTests extends BaseTest {
         getTest().pass("All signup page UI elements verified");
     }
 
-    private com.sponsorship.utils.WaitUtils waitUtils;
-
-    @Override
-    public void setUp() {
-        super.setUp();
-        this.waitUtils = new com.sponsorship.utils.WaitUtils(driver);
-    }
+    // waitUtils and setUp are handled by BaseTest
 }

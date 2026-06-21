@@ -35,6 +35,7 @@ public class BaseTest {
     protected PaymentPage paymentPage;
     protected RatingPage ratingPage;
     protected NotificationPage notificationPage;
+    protected com.sponsorship.utils.WaitUtils waitUtils;
 
     @BeforeSuite(alwaysRun = true)
     public void suiteSetup() {
@@ -45,6 +46,7 @@ public class BaseTest {
     public void setUp() {
         driver = DriverFactory.initDriver();
         driver.get(ConfigReader.getBaseUrl());
+        waitUtils = new com.sponsorship.utils.WaitUtils(driver);
         initializePageObjects();
     }
 
