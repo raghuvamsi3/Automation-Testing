@@ -111,7 +111,7 @@ public class AdminTests extends BaseTest {
         driver.get(driver.getCurrentUrl().replace("/dashboard/brand", "/dashboard/admin"));
         
         // Wait for potential redirect or error
-        try { Thread.sleep(2000); } catch (InterruptedException e) { }
+        waitUtils.waitForUrlContains("/dashboard/brand");
 
         getTest().info("Step 3: Verify access is blocked (redirected away)");
         Assert.assertFalse(driver.getCurrentUrl().contains("/dashboard/admin"),
