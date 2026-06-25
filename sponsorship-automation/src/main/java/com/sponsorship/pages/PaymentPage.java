@@ -22,6 +22,8 @@ public class PaymentPage extends BasePage {
     private final By loadingSpinner = By.tagName("mat-spinner");
     private final By statusChips = By.cssSelector("table .status-chip");
     private final By amountCells = By.cssSelector("table td:nth-child(3)");
+    private final By statusFilter = By.cssSelector("mat-select[formcontrolname='status'], .status-filter mat-select");
+    private final By downloadButtons = By.xpath("//button[contains(.,'Download') or contains(@class,'download')]");
 
     public PaymentPage(WebDriver driver) {
         super(driver);
@@ -81,4 +83,31 @@ public class PaymentPage extends BasePage {
     }
 
     public String getSnackbarText() { return getSnackbarMessage(); }
+
+    // --- Filter / Download Helpers ---
+
+    public boolean hasStatusFilter() {
+        try {
+            return isDisplayed(statusFilter);
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+    public void selectStatusFilter(String option) {
+        selectMatOption(statusFilter, option);
+        waitForPageLoad();
+    }
+
+    public boolean hasDownloadButtons() {
+        return getElementCount(downloadButtons) > 0;
+    }
+
+    public void clickFirstDownload() {
+        List<WebElement> buttons = findElements(downloadButtons);
+        if (!buttons.isEmpty()) {
+            buttons.get(0).click();
+            waitUtils.shortWait(1000);
+        }
+    }
 }

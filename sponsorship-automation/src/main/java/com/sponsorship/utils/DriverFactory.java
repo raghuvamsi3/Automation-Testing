@@ -10,6 +10,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 
 import java.time.Duration;
+import org.openqa.selenium.Dimension;
 
 /**
  * DriverFactory - Manages WebDriver lifecycle using WebDriverManager.
@@ -70,7 +71,13 @@ public class DriverFactory {
                 break;
         }
 
-        driver.manage().window().maximize();
+        // Avoid using maximize() due to CDP/runtime issues with some Chrome versions.
+        // Use a fixed window size instead which is more reliable across environments.
+        try {
+            driver.manage().window().setSize(new Dimension(1920, 1080));
+        } catch (Exception ignored) {
+            // If setting size fails, continue without failing driver init.
+        }
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(implicitWait));
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(pageLoadTimeout));
         driver.manage().deleteAllCookies();
