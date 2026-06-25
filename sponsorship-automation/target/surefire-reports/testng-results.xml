@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="4" passed="0" failed="3" skipped="1">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2026-06-21T10:26:20 IST" name="Surefire suite" finished-at="2026-06-21T10:32:34 IST" duration-ms="374074">
+    <groups>
+      <group name="regression">
+        <method signature="CampaignCreationTests.TC_02_01_createCampaignWithValidData()[pri:0, instance:com.sponsorship.tests.campaign.CampaignCreationTests@31368b99]" name="TC_02_01_createCampaignWithValidData" class="com.sponsorship.tests.campaign.CampaignCreationTests"/>
+        <method signature="CampaignCreationTests.TC_02_02_createCampaignNameTooShort()[pri:0, instance:com.sponsorship.tests.campaign.CampaignCreationTests@31368b99]" name="TC_02_02_createCampaignNameTooShort" class="com.sponsorship.tests.campaign.CampaignCreationTests"/>
+        <method signature="CampaignCreationTests.TC_02_03_createCampaignPastStartDate()[pri:0, instance:com.sponsorship.tests.campaign.CampaignCreationTests@31368b99]" name="TC_02_03_createCampaignPastStartDate" class="com.sponsorship.tests.campaign.CampaignCreationTests"/>
+        <method signature="CampaignCreationTests.TC_02_06_campaignDescriptionTooShort()[pri:0, instance:com.sponsorship.tests.campaign.CampaignCreationTests@31368b99]" name="TC_02_06_campaignDescriptionTooShort" class="com.sponsorship.tests.campaign.CampaignCreationTests"/>
+      </group> <!-- regression -->
+      <group name="smoke">
+        <method signature="CampaignCreationTests.TC_02_01_createCampaignWithValidData()[pri:0, instance:com.sponsorship.tests.campaign.CampaignCreationTests@31368b99]" name="TC_02_01_createCampaignWithValidData" class="com.sponsorship.tests.campaign.CampaignCreationTests"/>
+      </group> <!-- smoke -->
+      <group name="campaign">
+        <method signature="CampaignCreationTests.TC_02_01_createCampaignWithValidData()[pri:0, instance:com.sponsorship.tests.campaign.CampaignCreationTests@31368b99]" name="TC_02_01_createCampaignWithValidData" class="com.sponsorship.tests.campaign.CampaignCreationTests"/>
+        <method signature="CampaignCreationTests.TC_02_02_createCampaignNameTooShort()[pri:0, instance:com.sponsorship.tests.campaign.CampaignCreationTests@31368b99]" name="TC_02_02_createCampaignNameTooShort" class="com.sponsorship.tests.campaign.CampaignCreationTests"/>
+        <method signature="CampaignCreationTests.TC_02_03_createCampaignPastStartDate()[pri:0, instance:com.sponsorship.tests.campaign.CampaignCreationTests@31368b99]" name="TC_02_03_createCampaignPastStartDate" class="com.sponsorship.tests.campaign.CampaignCreationTests"/>
+        <method signature="CampaignCreationTests.TC_02_06_campaignDescriptionTooShort()[pri:0, instance:com.sponsorship.tests.campaign.CampaignCreationTests@31368b99]" name="TC_02_06_campaignDescriptionTooShort" class="com.sponsorship.tests.campaign.CampaignCreationTests"/>
+      </group> <!-- campaign -->
+    </groups>
+    <test started-at="2026-06-21T10:26:20 IST" name="Surefire test" finished-at="2026-06-21T10:32:34 IST" duration-ms="374074">
+      <class name="com.sponsorship.tests.campaign.CampaignCreationTests">
+        <test-method is-config="true" signature="suiteSetup()[pri:0, instance:com.sponsorship.tests.campaign.CampaignCreationTests@31368b99]" started-at="2026-06-21T10:26:19 IST" name="suiteSetup" finished-at="2026-06-21T10:26:20 IST" duration-ms="241" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- suiteSetup -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.sponsorship.tests.campaign.CampaignCreationTests@31368b99]" started-at="2026-06-21T10:26:20 IST" name="setUp" finished-at="2026-06-21T10:26:22 IST" duration-ms="2578" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="TC_02_01_createCampaignWithValidData()[pri:0, instance:com.sponsorship.tests.campaign.CampaignCreationTests@31368b99]" started-at="2026-06-21T10:26:22 IST" name="TC_02_01_createCampaignWithValidData" description="TC_02_01 - Create campaign with valid budget, timeline, and platform" finished-at="2026-06-21T10:29:42 IST" duration-ms="199646" status="FAIL">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for element to be clickable: By.cssSelector: button[type='submit'] (tried for 60 second(s) with 500 milliseconds interval)
+Build info: version: '4.25.0', revision: '8a8aea2337'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.138, chrome: {chromedriverVersion: 147.0.7727.117 (474cc805edd..., userDataDir: C:\Users\raghu\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58979}, goog:processID: 8468, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58979/devtoo..., se:cdpVersion: 147.0.7727.138, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: dd2ff8559ba0c25b4bd97effa1f992be]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.cssSelector: button[type='submit'] (tried for 60 second(s) with 500 milliseconds interval)
+Build info: version: '4.25.0', revision: '8a8aea2337'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.138, chrome: {chromedriverVersion: 147.0.7727.117 (474cc805edd..., userDataDir: C:\Users\raghu\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58979}, goog:processID: 8468, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58979/devtoo..., se:cdpVersion: 147.0.7727.138, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: dd2ff8559ba0c25b4bd97effa1f992be
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+at com.sponsorship.utils.WaitUtils.waitForClickable(WaitUtils.java:42)
+at com.sponsorship.pages.BasePage.click(BasePage.java:37)
+at com.sponsorship.pages.CampaignFormPage.clickSubmit(CampaignFormPage.java:76)
+at com.sponsorship.pages.CampaignFormPage.createCampaign(CampaignFormPage.java:99)
+at com.sponsorship.tests.campaign.CampaignCreationTests.TC_02_01_createCampaignWithValidData(CampaignCreationTests.java:48)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:155)
+at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeSingleClass(TestNGDirectoryTestSuite.java:102)
+at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:91)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:137)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_02_01_createCampaignWithValidData -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.sponsorship.tests.campaign.CampaignCreationTests@31368b99]" started-at="2026-06-21T10:29:42 IST" name="tearDown" finished-at="2026-06-21T10:29:42 IST" duration-ms="294" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC_02_01_createCampaignWithValidData status=FAILURE method=CampaignCreationTests.TC_02_01_createCampaignWithValidData()[pri:0, instance:com.sponsorship.tests.campaign.CampaignCreationTests@31368b99] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.sponsorship.tests.campaign.CampaignCreationTests@31368b99]" started-at="2026-06-21T10:29:42 IST" name="setUp" finished-at="2026-06-21T10:29:44 IST" duration-ms="1579" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="TC_02_02_createCampaignNameTooShort()[pri:0, instance:com.sponsorship.tests.campaign.CampaignCreationTests@31368b99]" started-at="2026-06-21T10:29:44 IST" name="TC_02_02_createCampaignNameTooShort" description="TC_02_02 - Campaign creation fails if name is less than 3 characters" finished-at="2026-06-21T10:31:06 IST" duration-ms="82464" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Validation error for short name should be displayed expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Validation error for short name should be displayed expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertTrue(Assert.java:57)
+at com.sponsorship.tests.campaign.CampaignCreationTests.TC_02_02_createCampaignNameTooShort(CampaignCreationTests.java:89)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:155)
+at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeSingleClass(TestNGDirectoryTestSuite.java:102)
+at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:91)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:137)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_02_02_createCampaignNameTooShort -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.sponsorship.tests.campaign.CampaignCreationTests@31368b99]" started-at="2026-06-21T10:31:07 IST" name="tearDown" finished-at="2026-06-21T10:31:07 IST" duration-ms="255" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC_02_02_createCampaignNameTooShort status=FAILURE method=CampaignCreationTests.TC_02_02_createCampaignNameTooShort()[pri:0, instance:com.sponsorship.tests.campaign.CampaignCreationTests@31368b99] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.sponsorship.tests.campaign.CampaignCreationTests@31368b99]" started-at="2026-06-21T10:31:07 IST" name="setUp" finished-at="2026-06-21T10:31:09 IST" duration-ms="2437" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="TC_02_03_createCampaignPastStartDate()[pri:0, instance:com.sponsorship.tests.campaign.CampaignCreationTests@31368b99]" started-at="2026-06-21T10:31:09 IST" name="TC_02_03_createCampaignPastStartDate" description="TC_02_03 - BLOCKED: Start date in past validation not implemented" finished-at="2026-06-21T10:31:09 IST" duration-ms="1" status="SKIP">
+          <exception class="org.testng.SkipException">
+            <message>
+              <![CDATA[BLOCKED - TC_02_03: Start date past validation is not implemented in the current build]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.SkipException: BLOCKED - TC_02_03: Start date past validation is not implemented in the current build
+at com.sponsorship.tests.campaign.CampaignCreationTests.TC_02_03_createCampaignPastStartDate(CampaignCreationTests.java:109)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:155)
+at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeSingleClass(TestNGDirectoryTestSuite.java:102)
+at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:91)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:137)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.SkipException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_02_03_createCampaignPastStartDate -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.sponsorship.tests.campaign.CampaignCreationTests@31368b99]" started-at="2026-06-21T10:31:09 IST" name="tearDown" finished-at="2026-06-21T10:31:09 IST" duration-ms="115" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC_02_03_createCampaignPastStartDate status=SKIP method=CampaignCreationTests.TC_02_03_createCampaignPastStartDate()[pri:0, instance:com.sponsorship.tests.campaign.CampaignCreationTests@31368b99] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.sponsorship.tests.campaign.CampaignCreationTests@31368b99]" started-at="2026-06-21T10:31:09 IST" name="setUp" finished-at="2026-06-21T10:31:11 IST" duration-ms="1486" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="TC_02_06_campaignDescriptionTooShort()[pri:0, instance:com.sponsorship.tests.campaign.CampaignCreationTests@31368b99]" started-at="2026-06-21T10:31:11 IST" name="TC_02_06_campaignDescriptionTooShort" description="TC_02_06 - Campaign creation fails if description is too short" finished-at="2026-06-21T10:32:33 IST" duration-ms="82247" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Validation error for short description should be displayed expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Validation error for short description should be displayed expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertTrue(Assert.java:57)
+at com.sponsorship.tests.campaign.CampaignCreationTests.TC_02_06_campaignDescriptionTooShort(CampaignCreationTests.java:131)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:155)
+at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeSingleClass(TestNGDirectoryTestSuite.java:102)
+at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:91)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:137)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_02_06_campaignDescriptionTooShort -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.sponsorship.tests.campaign.CampaignCreationTests@31368b99]" started-at="2026-06-21T10:32:33 IST" name="tearDown" finished-at="2026-06-21T10:32:34 IST" duration-ms="268" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC_02_06_campaignDescriptionTooShort status=FAILURE method=CampaignCreationTests.TC_02_06_campaignDescriptionTooShort()[pri:0, instance:com.sponsorship.tests.campaign.CampaignCreationTests@31368b99] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="suiteTearDown()[pri:0, instance:com.sponsorship.tests.campaign.CampaignCreationTests@31368b99]" started-at="2026-06-21T10:32:34 IST" name="suiteTearDown" finished-at="2026-06-21T10:32:34 IST" duration-ms="26" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- suiteTearDown -->
+      </class> <!-- com.sponsorship.tests.campaign.CampaignCreationTests -->
+    </test> <!-- Surefire test -->
+  </suite> <!-- Surefire suite -->
+</testng-results>
