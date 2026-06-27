@@ -64,12 +64,12 @@ public class CampaignDiscoveryTests extends BaseTest {
         loginAsInfluencer();
         navbar.goToCampaigns();
 
-        getTest().info("Step 1: Select first active campaign");
+        getTest().info("Step 1: Select first active, unapplied campaign");
         if (campaignList.getCampaignCount() == 0) {
             getTest().skip("No active campaigns available to apply to");
             throw new SkipException("No campaigns available");
         }
-        campaignList.clickCampaignCard(0);
+        campaignList.clickFirstUnappliedCampaign();
 
         getTest().info("Step 2: Check if already applied");
         if (campaignDetail.isAlreadyApplied()) {

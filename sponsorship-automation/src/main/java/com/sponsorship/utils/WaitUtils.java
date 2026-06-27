@@ -102,9 +102,17 @@ public class WaitUtils {
      * Wait for Angular Material snackbar to appear and return its text.
      */
     public String waitForSnackbar() {
-        WebElement snackbar = wait.until(ExpectedConditions.visibilityOfElementLocated(
-                By.cssSelector("mat-snack-bar-container simple-snack-bar span")));
-        return snackbar.getText();
+        try {
+            // Try standard Angular Material 15+ locator first
+            WebElement snackbar = wait.until(ExpectedConditions.visibilityOfElementLocated(
+                    By.cssSelector("mat-snack-bar-container simple-snack-bar span, mat-snack-bar-container .mdc-snackbar__label")));
+            return snackbar.getText();
+        } catch (TimeoutException e) {
+            // Fallback to simpler locator
+            WebElement snackbar = wait.until(ExpectedConditions.visibilityOfElementLocated(
+                    By.cssSelector("mat-snack-bar-container")));
+            return snackbar.getText();
+        }
     }
 
     /**
@@ -112,9 +120,9 @@ public class WaitUtils {
      */
     public boolean waitForSnackbarWithText(String expectedText) {
         try {
-            WebElement snackbar = wait.until(ExpectedConditions.visibilityOfElementLocated(
-                    By.cssSelector("mat-snack-bar-container")));
-            return snackbar.getText().contains(expectedText);
+            // Using textContains expected condition directly on the container
+            return wait.until(ExpectedConditions.textToBePresentInElementLocated(
+                    By.cssSelector("mat-snack-bar-container"), expectedText));
         } catch (TimeoutException e) {
             return false;
         }
@@ -191,5 +199,12 @@ public class WaitUtils {
      */
     public void waitForNavigation(String currentUrl) {
         wait.until(ExpectedConditions.not(ExpectedConditions.urlToBe(currentUrl)));
+    }
+
+    /**
+     * Wait for an element to become stale (removed from DOM), useful for route transitions.
+     */
+    public void waitForElementToBeStale(WebElement element) {
+        wait.until(ExpectedConditions.stalenessOf(element));
     }
 }

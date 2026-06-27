@@ -133,8 +133,8 @@ public class SignupTests extends BaseTest {
         signupPage.enterEmail(generateUniqueEmail());
         signupPage.enterPassword("ab1"); // Too short, but missing @
 
-        getTest().info("Step 3: Click on another field to trigger validation");
-        signupPage.enterUsername(""); // Trigger blur on password field
+        getTest().info("Step 3: Click outside to trigger validation");
+        signupPage.blurPasswordField();
 
         getTest().info("Step 4: Verify password validation error");
         Assert.assertTrue(signupPage.isPasswordPatternErrorDisplayed(),

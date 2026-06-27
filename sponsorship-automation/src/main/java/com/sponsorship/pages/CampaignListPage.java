@@ -15,9 +15,9 @@ public class CampaignListPage extends BasePage {
     private final By pageTitle = By.cssSelector(".page-header h1");
     private final By createCampaignButton = By.xpath("//button[contains(.,'Create Campaign')]");
     private final By searchInput = By.cssSelector(".filters input[matInput]");
-    private final By platformFilter = By.xpath("//mat-label[text()='Platform']/ancestor::mat-form-field//mat-select");
-    private final By statusFilter = By.xpath("//mat-label[text()='Status']/ancestor::mat-form-field//mat-select");
-    private final By applicationFilter = By.xpath("//mat-label[text()='Application Status']/ancestor::mat-form-field//mat-select");
+    private final By platformFilter = By.cssSelector("mat-select[formcontrolname='platform'], mat-select[name='platform']");
+    private final By statusFilter = By.cssSelector("mat-select[formcontrolname='status'], mat-select[name='status']");
+    private final By applicationFilter = By.cssSelector("mat-select[formcontrolname='applicationStatus'], mat-select[name='applicationStatus']");
     private final By clearFiltersButton = By.xpath("//button[contains(.,'Clear Filters')]");
     private final By campaignCards = By.cssSelector(".campaign-card");
     private final By campaignNames = By.cssSelector(".campaign-card mat-card-title");
@@ -85,6 +85,23 @@ public class CampaignListPage extends BasePage {
         List<WebElement> cards = findElements(campaignCards);
         if (index < cards.size()) {
             cards.get(index).click();
+            waitForPageLoad();
+        }
+    }
+
+    public void clickFirstUnappliedCampaign() {
+        List<WebElement> cards = findElements(campaignCards);
+        for (WebElement card : cards) {
+            List<WebElement> badges = card.findElements(By.cssSelector(".applied-badge"));
+            if (badges.isEmpty()) {
+                card.click();
+                waitForPageLoad();
+                return;
+            }
+        }
+        // If all are applied, just click the first one and let the test logic handle it
+        if (!cards.isEmpty()) {
+            cards.get(0).click();
             waitForPageLoad();
         }
     }

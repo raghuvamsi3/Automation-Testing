@@ -71,6 +71,15 @@ public class SignupPage extends BasePage {
     }
 
     /**
+     * Blurs the password field to trigger validation.
+     */
+    public SignupPage blurPasswordField() {
+        click(cardTitle);
+        waitUtils.shortWait(200);
+        return this;
+    }
+
+    /**
      * Selects role from the dropdown (BRAND or INFLUENCER).
      */
     public SignupPage selectRole(String role) {

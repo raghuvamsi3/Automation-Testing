@@ -21,7 +21,6 @@ public class LoginPage extends BasePage {
     private final By brandPill = By.cssSelector(".brand-pill");
     private final By cardTitle = By.cssSelector("mat-card-title");
     private final By loadingSpinner = By.cssSelector("mat-spinner");
-    private final By snackbarContainer = By.xpath("//*[@id='mat-snack-bar-container-live-8']/div/simple-snack-bar/div[1]");
     private final By demoAccountsSection = By.cssSelector(".demo-accounts");
 
     public LoginPage(WebDriver driver) {

@@ -83,7 +83,7 @@ public class CampaignCreationTests extends BaseTest {
         campaignForm.enterName("Ab"); // 2 characters
         
         getTest().info("Step 2: Trigger validation");
-        campaignForm.enterDescription(""); // Trigger blur
+        campaignForm.blurForm();
 
         getTest().info("Step 3: Verify validation error");
         Assert.assertTrue(campaignForm.isNameMinLengthErrorDisplayed(),
@@ -125,7 +125,7 @@ public class CampaignCreationTests extends BaseTest {
         campaignForm.enterDescription("Short");
         
         getTest().info("Step 2: Trigger validation");
-        campaignForm.enterName(""); // Trigger blur
+        campaignForm.blurForm();
 
         getTest().info("Step 3: Verify validation error");
         Assert.assertTrue(campaignForm.isDescMinLengthErrorDisplayed(),

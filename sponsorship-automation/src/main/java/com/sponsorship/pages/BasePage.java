@@ -132,13 +132,19 @@ public abstract class BasePage {
             jsClick(selectLocator);
             waitUtils.waitForMatSelectPanel();
         }
-        By optionLocator = By.xpath("//mat-option[contains(normalize-space(.), '" + optionText + "')]");
+        
+        // Let the animation finish opening
+        waitUtils.shortWait(300);
+        
+        String lowerOption = optionText.toLowerCase();
+        By optionLocator = By.xpath("//mat-option[contains(translate(normalize-space(.), 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz'), '" + lowerOption + "')]");
         try {
             click(optionLocator);
         } catch (Exception e) {
             jsClick(optionLocator);
         }
-        // Wait for overlay to close
+        
+        // Wait for overlay to close completely
         waitUtils.shortWait(500);
     }
 
@@ -241,5 +247,18 @@ public abstract class BasePage {
     protected void waitForPageLoad() {
         waitUtils.waitForAngularLoad();
         waitUtils.waitForSpinnerToDisappear();
+    }
+
+    /**
+     * Helper to wait for route changes in Angular SPAs.
+     */
+    protected void waitForAngularRouteChange(By elementOnCurrentPage) {
+        try {
+            WebElement element = driver.findElement(elementOnCurrentPage);
+            waitUtils.waitForElementToBeStale(element);
+        } catch (Exception e) {
+            // Element might already be gone
+        }
+        waitForPageLoad();
     }
 }

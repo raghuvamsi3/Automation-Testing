@@ -108,10 +108,10 @@ public class AdminTests extends BaseTest {
         loginAsBrand();
 
         getTest().info("Step 2: Force navigate URL to /dashboard/admin");
-        driver.get(driver.getCurrentUrl().replace("/dashboard/brand", "/dashboard/admin"));
+        driver.get(com.sponsorship.utils.ConfigReader.getBaseUrl() + "/dashboard/admin");
         
         // Wait for potential redirect or error
-        waitUtils.waitForUrlContains("/dashboard/brand");
+        waitUtils.waitForAngularLoad();
 
         getTest().info("Step 3: Verify access is blocked (redirected away)");
         Assert.assertFalse(driver.getCurrentUrl().contains("/dashboard/admin"),

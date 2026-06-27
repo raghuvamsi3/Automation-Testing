@@ -72,6 +72,15 @@ public class CampaignFormPage extends BasePage {
         return this;
     }
 
+    /**
+     * Blurs the form fields to trigger validation.
+     */
+    public CampaignFormPage blurForm() {
+        jsClick(formTitle);
+        waitUtils.shortWait(200);
+        return this;
+    }
+
     public void clickSubmit() {
         click(submitButton);
     }
@@ -96,6 +105,7 @@ public class CampaignFormPage extends BasePage {
         if (eligibility != null && !eligibility.isEmpty()) {
             enterEligibility(eligibility);
         }
+        blurForm(); // Trigger validation checks
         clickSubmit();
     }
 
