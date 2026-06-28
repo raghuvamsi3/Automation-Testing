@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed Tests Suite" thread-count="10" parallel="tests">
+    
+    <listeners>
+        <listener class-name="com.sponsorship.listeners.ExtentTestListener"/>
+    </listeners>
+
+    <test name="Failed Campaign Tests">
+        <classes>
+            <class name="com.sponsorship.tests.campaign.CampaignCreationTests">
+                <methods>
+                    <include name="TC_02_01_createCampaignWithValidData"/>
+                    <include name="TC_02_02_createCampaignNameTooShort"/>
+                    <include name="TC_02_06_campaignDescriptionTooShort"/>
+                </methods>
+            </class>
+            <class name="com.sponsorship.tests.campaign.CampaignDiscoveryTests">
+                <methods>
+                    <include name="TC_03_01_filterCampaignsByPlatform"/>
+                    <include name="TC_03_03_applyToCampaignWithValidProposal"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Failed Payment Tests">
+        <classes>
+            <class name="com.sponsorship.tests.payment.PaymentTests">
+                <methods>
+                    <include name="TC_05_03_paymentFiltering"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+</suite>

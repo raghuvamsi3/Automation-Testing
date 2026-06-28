@@ -39,11 +39,13 @@ public class CampaignFormPage extends BasePage {
 
     public CampaignFormPage enterName(String name) {
         type(nameInput, name);
+        driver.findElement(nameInput).sendKeys(org.openqa.selenium.Keys.TAB);
         return this;
     }
 
     public CampaignFormPage enterDescription(String description) {
         type(descriptionInput, description);
+        driver.findElement(descriptionInput).sendKeys(org.openqa.selenium.Keys.TAB);
         return this;
     }
 
@@ -54,21 +56,25 @@ public class CampaignFormPage extends BasePage {
 
     public CampaignFormPage enterBudget(String budget) {
         type(budgetInput, budget);
+        driver.findElement(budgetInput).sendKeys(org.openqa.selenium.Keys.TAB);
         return this;
     }
 
     public CampaignFormPage enterStartDate(String date) {
         type(startDateInput, date);
+        driver.findElement(startDateInput).sendKeys(org.openqa.selenium.Keys.TAB);
         return this;
     }
 
     public CampaignFormPage enterEndDate(String date) {
         type(endDateInput, date);
+        driver.findElement(endDateInput).sendKeys(org.openqa.selenium.Keys.TAB);
         return this;
     }
 
     public CampaignFormPage enterEligibility(String eligibility) {
         type(eligibilityInput, eligibility);
+        driver.findElement(eligibilityInput).sendKeys(org.openqa.selenium.Keys.TAB);
         return this;
     }
 

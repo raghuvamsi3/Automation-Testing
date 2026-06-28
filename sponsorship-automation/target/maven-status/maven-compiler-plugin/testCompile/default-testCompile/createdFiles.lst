@@ -1,0 +1,12 @@
+com\sponsorship\tests\campaign\CampaignManagementTests.class
+com\sponsorship\base\BaseTest.class
+com\sponsorship\listeners\ExtentTestListener.class
+com\sponsorship\tests\payment\PaymentTests.class
+com\sponsorship\tests\campaign\CampaignCreationTests.class
+com\sponsorship\tests\campaign\CampaignDiscoveryTests.class
+com\sponsorship\tests\rating\RatingTests.class
+com\sponsorship\tests\admin\AdminTests.class
+com\sponsorship\tests\auth\LoginTests.class
+com\sponsorship\tests\auth\SignupTests.class
+com\sponsorship\tests\notification\NotificationTests.class
+com\sponsorship\tests\sponsorship\SponsorshipWorkflowTests.class
